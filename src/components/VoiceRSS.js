@@ -27,6 +27,8 @@ class VoiceRSS {
         case "caf":
           supported = new Audio().canPlayType("audio/x-caf").replace("no", "");
           break;
+        default:
+          supported = false;
       }
       if (!supported)
         throw new Error(
