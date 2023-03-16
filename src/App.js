@@ -1,3 +1,5 @@
+import "./App.css";
+import robot from "./robot.gif";
 import React, { Component } from "react";
 import VoiceRSS from "./components/VoiceRSS";
 
@@ -53,11 +55,14 @@ class JokeApp extends Component {
     const { joke } = this.state;
 
     return (
-      <div>
+      <div className="container">
         <button id="button" onClick={this.getJokes}>
           Get Jokes
         </button>
-        <div id="speech">{joke}</div>
+        <p id="speech" className="speech-bubble">
+          {joke} Hello!
+        </p>
+        <img className="robo" src={robot} alt="robo" />
       </div>
     );
   }
